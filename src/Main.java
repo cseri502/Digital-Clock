@@ -12,7 +12,7 @@ class DigitalClock extends JFrame {
     private final ClockConfig config;
 
     public DigitalClock() {
-        this(new ClockConfig("Digital clock", "https://github.com/cseri502", 500, 200, 1000));
+        this(new ClockConfig("Digital Clock", "https://github.com/cseri502", 500, 200, 1000));
     }
 
     public DigitalClock(ClockConfig config) {
@@ -96,7 +96,7 @@ class DigitalClock extends JFrame {
         }
 
         public String getTitle() {
-            return title;
+            return title + " | " + repoLink;
         }
 
         public int getWidth() {
@@ -112,6 +112,7 @@ class DigitalClock extends JFrame {
         }
     }
 }
+
 public class Main {
     public static void main(String[] args) {
         final DigitalClock clock = new DigitalClock();
