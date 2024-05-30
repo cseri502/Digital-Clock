@@ -28,6 +28,13 @@ class DigitalClock extends JFrame {
         setResizable(false);
         setIconImage(getImage("digital-clock.png"));
 
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = toolkit.getScreenSize();
+        int x = (int) ((screenSize.getWidth() - config.getWidth()) / 2);
+        int y = (int) ((screenSize.getHeight() - config.getHeight()) / 2);
+
+        setLocation(x, y);
+
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         panel.setLayout(new BorderLayout());
